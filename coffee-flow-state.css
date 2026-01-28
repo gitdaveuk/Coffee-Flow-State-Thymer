@@ -1,0 +1,405 @@
+/*
+* Coffee Flow State Theme for Thymer
+* Warm espresso, cream, and muted terracotta
+* A cohesive palette for focused creative work
+* Variants: Dark (Espresso) and Light (Cream)
+*/
+
+/* ------------------------------------------- */
+/* Espresso - Dark Mode                        */
+/* Deep charcoal and coffee tones with warm    */
+/* accents                                     */
+/* ------------------------------------------- */
+html[data-theme="basic-dark-coffee-flow"] {
+    color-scheme: dark;
+
+    .heading-h1,
+    .heading-h2,
+    .heading-h3,
+    .heading-h4,
+    .heading-h5,
+    .heading-h6 {
+        color: #F2EFE9;
+    }
+
+    --text-base-size: 16px;
+  
+    /* Background Colors - Deep warm charcoal */
+    --color-bg-50: #E6E2DB;
+    --color-bg-100: #B8B2A8;
+    --color-bg-150: #9A928A;
+    --color-bg-200: #7C756E;
+    --color-bg-300: #5E5852;
+    --color-bg-400: #4A4540;
+    --color-bg-500: #3D3834;
+    --color-bg-600: #2E2A26;
+    --color-bg-700: #26221F;
+    --color-bg-800: #2F2B26;
+    --color-bg-900: #25221F;
+    --color-bg-950: #1A1816;
+    --color-bg-500-50: rgba(61, 56, 52, 0.5);
+    --color-bg-950-50: rgba(26, 24, 22, 0.65);
+
+    /* Primary Colors - Muted Terracotta */
+    --color-primary-50: #FAF6F1;
+    --color-primary-100: #F0E6DB;
+    --color-primary-200: #E6D0C0;
+    --color-primary-300: #D4B8A8;
+    --color-primary-400: #C49A7C;
+    --color-primary-500: #B07D62;
+    --color-primary-600: #9C6B52;
+    --color-primary-700: #784832;
+    --color-primary-800: #5C3626;
+    --color-primary-900: #3D241A;
+    --color-primary-950: #1F120D;
+    --color-primary-400-70: rgba(196, 154, 124, 0.7);
+    --color-primary-950-20: rgba(31, 18, 13, 0.2);
+    --color-primary-text-100: #FAF6F1;
+
+    /* Secondary Colors - Coffee Taupe */
+    --color-secondary-400: #8A7A6B;
+    --color-secondary-500: #6B5D52;
+    --color-secondary-600: #52473F;
+
+    /* Text Colors - Warm stone */
+    --color-text-50: #F5F2EB;
+    --color-text-100: #E6E2DB;
+    --color-text-200: #D1CCC3;
+    --color-text-300: #B8B2A8;
+    --color-text-400: #9A928A;
+    --color-text-500: #7C756E;
+    --color-text-600: #5E5852;
+    --color-text-700: #C49A7C;
+    --color-text-800: #D4B8A8;
+    --color-text-900: #25221F;
+    --color-text-950: #3D3834;
+
+    /* Semantic Colors - Earth tones */
+    --text-ok: #7A6B5D;
+    --text-status-online: #7A6B5D;
+    --text-warning: #C49A6B;
+    --text-error: #C27878;
+    --bg-alert: #9C4848;
+    --fg-alert: #F5F2EB;
+
+    /* Links - Terracotta warmth */
+    --link-color: #C49A7C;
+    --link-hover-color: #D4B8A8;
+    --ed-link-color: #C49A7C;
+    --ed-link-hover-color: #D4B8A8;
+
+    --ed-hashtag-color: #9A928A;
+    --ed-hashtag-bg: rgba(196, 154, 124, 0.15);
+
+    --ed-mention-color: #A8B8C8;
+    --ed-mention-bg: rgba(168, 184, 200, 0.12);
+    --ed-mention-hover-bg: rgba(168, 184, 200, 0.2);
+    --ed-mention-hover-color: #C0D0E0;
+
+    --ed-datetime-color: #C49A7C;
+    --ed-datetime-bg: rgba(196, 154, 124, 0.12);
+
+    /* Tasks - Coffee completion */
+    --ed-check-div-border: #7C756E;
+    --ed-check-div-hover-border: #C49A7C;
+    --ed-check-done-bg: #6B5D52;
+    --ed-check-done-fg: #25221F;
+
+    /* Done task styling */
+    .listitem.listitem-task.state-done .lineitem-text {
+        color: #7C756E !important;
+        text-decoration-color: #6B5D52 !important;
+        opacity: 0.7 !important;
+    }
+
+    /* Selection - Warm amber glow */
+    --selection-bg: rgba(196, 154, 124, 0.25);
+    --selection-fg: #F5F2EB;
+    --ed-selection-self-bg: rgba(196, 154, 124, 0.25);
+    --ed-selection-blurred-bg: rgba(196, 154, 124, 0.12);
+
+    --ed-caret-self-radius: 2px;
+    --ed-caret-self-border-width: 0px;
+    --ed-caret-self-background: color-mix(in srgb, #C49A7C 90%, transparent);
+    --ed-caret-self-box-shadow: 0 0 4px rgba(196, 154, 124, 0.5);
+
+    /* Quotes & Code */
+    --ed-quote-border-color: #4A4540;
+    --ed-code-border: transparent;
+    --ed-code-bg: rgba(74, 69, 64, 0.4);
+
+    .lineitem-code {
+        background-color: var(--color-bg-300) !important;
+        color: #E6E2DB !important;
+        border-radius: 4px;
+        padding: 2px 5px;
+        font-family: var(--font-monospace);
+    }
+
+    /* Note blocks */
+    --ed-block-note-bg: rgba(196, 154, 124, 0.08);
+    --ed-block-note-border: #7C756E;
+
+    /* UI Components - Coffee structure */
+    --cards-bg: #2F2B26;
+    --cards-hover-bg: #3D3834;
+    --cards-border-color: transparent;
+    --cards-border-color-focused: transparent;
+
+    --side-bg-active-focus: #4A3F36;
+    --side-fg-active-focus: #E6E2DB;
+    --sidebar-bg-hover: #3D3834;
+    --sidebar-border-color: transparent;
+
+    --cmdpal-bg-color: #26221F;
+    --cmdpal-selected-bg-color: #4A3F36;
+    --cmdpal-selected-fg-color: #F5F2EB;
+    --cmdpal-hover-bg-color: #2F2B26;
+    --cmdpal-border-color: rgba(245, 242, 235, 0.05);
+
+    --input-bg-color: #25221F;
+    --input-border-color: #4A4540;
+    --input-border-focus: 1px solid #7C756E;
+    --input-border-shadow: 0 0 8px rgba(196, 154, 124, 0.2);
+
+    --button-primary-bg-color: #7C756E;
+    --button-primary-fg-color: #F5F2EB;
+    --button-primary-bg-hover-color: #C49A7C;
+    --button-bg-color: #3D3834;
+    --button-border-color: transparent;
+    --button-bg-hover-color: #4A4540;
+
+    --color-shadow: rgba(0, 0, 0, 0.4);
+    --color-shadow-cards: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --color-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.4);
+
+    --logo-color: #C49A7C;
+    --logo-glow-shadow:
+        0 0 15px rgba(196, 154, 124, 0.3),
+        0 0 30px rgba(196, 154, 124, 0.15);
+
+    /* Enums - Muted earth palette */
+    --enum-red-bg: rgba(156, 72, 72, 0.25);
+    --enum-red-fg: #D4A8A8;
+    --enum-orange-bg: rgba(196, 154, 124, 0.2);
+    --enum-orange-fg: #D4B8A8;
+    --enum-yellow-bg: rgba(180, 160, 100, 0.2);
+    --enum-yellow-fg: #E0D0A0;
+    --enum-green-bg: rgba(122, 107, 93, 0.25);
+    --enum-green-fg: #B8A898;
+    --enum-cyan-bg: rgba(100, 160, 160, 0.2);
+    --enum-cyan-fg: #A8D0D0;
+    --enum-blue-bg: rgba(120, 140, 180, 0.2);
+    --enum-blue-fg: #B8C8E8;
+    --enum-purple-bg: rgba(160, 120, 160, 0.2);
+    --enum-purple-fg: #D0B8D0;
+    --enum-pink-bg: rgba(180, 120, 140, 0.2);
+    --enum-pink-fg: #E0B8C8;
+
+    --prop-border-focused: #25221F;
+    --prop-bg-focused: rgba(196, 154, 124, 0.2);
+    --shadow-sticky-row: 0 6px 12px rgba(0, 0, 0, 0.2);
+    --ed-drag-handle-color: #5E5852;
+    --ed-drag-handle-hover-border: #7C756E;
+
+    --gradient-scrim: none;
+}
+
+/* ------------------------------------------- */
+/* Cream - Light Mode                          */
+/* Warm paper tones with coffee and terracotta */
+/* accents                                     */
+/* ------------------------------------------- */
+html[data-theme="basic-light-coffee-flow"] {
+    color-scheme: light;
+
+    .heading-h1,
+    .heading-h2,
+    .heading-h3,
+    .heading-h4,
+    .heading-h5,
+    .heading-h6 {
+        color: #0F0E0D;
+    }
+
+    /* Background Colors - Warm cream paper */
+    --color-bg-50: #0F0E0D;
+    --color-bg-100: #1C1917;
+    --color-bg-150: #292524;
+    --color-bg-200: #3D3834;
+    --color-bg-300: #524B44;
+    --color-bg-400: #6B635A;
+    --color-bg-500: #8A817A;
+    --color-bg-600: #A8A095;
+    --color-bg-700: #C4BEB4;
+    --color-bg-800: #FAF8F5;
+    --color-bg-900: #F7F4EE;
+    --color-bg-950: #FDFCFA;
+    --color-bg-500-50: rgba(138, 129, 122, 0.5);
+    --color-bg-950-50: rgba(253, 252, 250, 0.65);
+
+    /* Primary Colors - Muted Terracotta */
+    --color-primary-50: #FDF9F5;
+    --color-primary-100: #F5EDE6;
+    --color-primary-200: #E6D8CC;
+    --color-primary-300: #D1B8A8;
+    --color-primary-400: #B89578;
+    --color-primary-500: #9C7658;
+    --color-primary-600: #825E42;
+    --color-primary-700: #664833;
+    --color-primary-800: #4A3426;
+    --color-primary-900: #2E2118;
+    --color-primary-950: #120D0A;
+    --color-primary-400-70: rgba(184, 149, 120, 0.7);
+    --color-primary-950-20: rgba(18, 13, 10, 0.2);
+    --color-primary-text-100: #FDF9F5;
+    
+    /* Secondary Colors - Coffee Taupe */
+    --color-secondary-400: #8A7A6B;
+    --color-secondary-500: #6B5D52;
+    --color-secondary-600: #52473F;
+
+    /* Text Colors - Near black with warmth */
+    --color-text-50: #0F0E0D;
+    --color-text-100: #1C1917;
+    --color-text-200: #292524;
+    --color-text-300: #3D3834;
+    --color-text-400: #524B44;
+    --color-text-500: #6B635A;
+    --color-text-600: #8A817A;
+    --color-text-700: #825E42;
+    --color-text-800: #664833;
+    --color-text-900: #F7F4EE;
+    --color-text-950: #292524;
+
+    /* Semantic Colors - Earth tones */
+    --text-ok: #5A4D42;
+    --text-status-online: #5A4D42;
+    --text-warning: #8B6914;
+    --text-error: #8B4040;
+    --bg-alert: #C27878;
+    --fg-alert: #FDF9F5;
+
+    /* Links - Terracotta warmth */
+    --link-color: #825E42;
+    --link-hover-color: #9C7658;
+    --ed-link-color: #825E42;
+    --ed-link-hover-color: #9C7658;
+
+    --ed-hashtag-color: #524B44;
+    --ed-hashtag-bg: rgba(184, 149, 120, 0.1);
+
+    --ed-mention-color: #6B5A4D;
+    --ed-mention-bg: rgba(107, 90, 77, 0.08);
+    --ed-mention-hover-bg: rgba(107, 90, 77, 0.15);
+    --ed-mention-hover-color: #52473F;
+
+    --ed-datetime-color: #825E42;
+    --ed-datetime-bg: rgba(130, 94, 66, 0.1);
+
+    /* Tasks - Coffee completion */
+    --ed-check-div-border: #8A817A;
+    --ed-check-div-hover-border: #9C7658;
+    --ed-check-done-bg: #6B5D52;
+    --ed-check-done-fg: #FDF9F5;
+
+    /* Done task styling */
+    .listitem.listitem-task.state-done .lineitem-text {
+        color: #8A817A !important;
+        text-decoration-color: #6B5D52 !important;
+        opacity: 0.75 !important;
+    }
+
+    /* Selection - Warm amber */
+    --selection-bg: rgba(184, 149, 120, 0.25);
+    --selection-fg: #0F0E0D;
+    --ed-selection-self-bg: rgba(184, 149, 120, 0.25);
+    --ed-selection-blurred-bg: rgba(184, 149, 120, 0.12);
+
+    --ed-caret-self-radius: 2px;
+    --ed-caret-self-border-width: 0px;
+    --ed-caret-self-background: color-mix(in srgb, #9C7658 90%, transparent);
+    --ed-caret-self-box-shadow: 0 0 3px rgba(156, 118, 88, 0.4);
+
+    /* Quotes & Code */
+    --ed-quote-border-color: #C4BEB4;
+    --ed-code-border: transparent;
+    --ed-code-bg: rgba(196, 190, 180, 0.5);
+
+    .lineitem-code {
+        background-color: var(--color-bg-600) !important;
+        color: #292524 !important;
+        border-radius: 4px;
+        padding: 2px 5px;
+        font-family: var(--font-monospace);
+    }
+
+    /* Note blocks */
+    --ed-block-note-bg: rgba(184, 149, 120, 0.08);
+    --ed-block-note-border: #8A817A;
+
+    /* UI Components - Coffee structure */
+    --cards-bg: #FAF8F5;
+    --cards-hover-bg: #F0EBE3;
+    --cards-border-color: transparent;
+    --cards-border-color-focused: transparent;
+
+    --side-bg-active-focus: #6B5D52;
+    --side-fg-active-focus: #FDF9F5;
+    --sidebar-bg-hover: #E6E2DA;
+    --sidebar-border-color: #DDD8D0;
+
+    --cmdpal-bg-color: #FAF8F5;
+    --cmdpal-selected-bg-color: #6B5D52;
+    --cmdpal-selected-fg-color: #FDF9F5;
+    --cmdpal-hover-bg-color: #F0EBE3;
+    --cmdpal-border-color: transparent;
+
+    --input-bg-color: #FAF8F5;
+    --input-border-color: #C4BEB4;
+    --input-border-focus: 1px solid #8A817A;
+    --input-border-shadow: 0 0 8px rgba(184, 149, 120, 0.2);
+
+    --button-primary-bg-color: #524B44;
+    --button-primary-fg-color: #FDF9F5;
+    --button-primary-bg-hover-color: #825E42;
+    --button-bg-color: #E6E2DA;
+    --button-border-color: transparent;
+    --button-bg-hover-color: #D1CCC3;
+
+    --color-shadow: rgba(15, 14, 13, 0.08);
+    --color-shadow-cards: 0 4px 6px rgba(15, 14, 13, 0.04);
+    --color-shadow-hover: 0 6px 12px rgba(15, 14, 13, 0.08);
+
+    --logo-color: #825E42;
+    --logo-glow-shadow:
+        0 0 15px rgba(184, 149, 120, 0.2),
+        0 0 30px rgba(184, 149, 120, 0.1);
+
+    /* Enums - Muted earth palette */
+    --enum-red-bg: rgba(139, 64, 64, 0.12);
+    --enum-red-fg: #8B4040;
+    --enum-orange-bg: rgba(184, 149, 120, 0.12);
+    --enum-orange-fg: #825E42;
+    --enum-yellow-bg: rgba(139, 105, 20, 0.12);
+    --enum-yellow-fg: #8B6914;
+    --enum-green-bg: rgba(82, 71, 63, 0.12);
+    --enum-green-fg: #52473F;
+    --enum-cyan-bg: rgba(70, 110, 110, 0.12);
+    --enum-cyan-fg: #466E6E;
+    --enum-blue-bg: rgba(90, 100, 120, 0.12);
+    --enum-blue-fg: #5F6478;
+    --enum-purple-bg: rgba(120, 90, 120, 0.12);
+    --enum-purple-fg: #785A78;
+    --enum-pink-bg: rgba(140, 90, 110, 0.12);
+    --enum-pink-fg: #8C5A6E;
+
+    --prop-border-focused: #FAF8F5;
+    --prop-bg-focused: rgba(184, 149, 120, 0.15);
+    --shadow-sticky-row: 0 6px 12px rgba(0, 0, 0, 0);
+    --ed-drag-handle-color: #C4BEB4;
+    --ed-drag-handle-hover-border: #8A817A;
+
+    --gradient-scrim: none;
+}
+
