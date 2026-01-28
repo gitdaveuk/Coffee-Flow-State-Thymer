@@ -1,8 +1,17 @@
 /*
-* Coffee Flow State Theme for Thymer
+* Coffee Flow State Theme for Thymer (Improved)
 * Warm espresso, cream, and muted terracotta
 * A cohesive palette for focused creative work
 * Variants: Dark (Espresso) and Light (Cream)
+* 
+* Improvements:
+* - Enhanced text contrast for better accessibility
+* - Fixed color progression inconsistencies
+* - Stronger error/warning colors while maintaining palette
+* - Consistent opacity values across modes
+* - Better shadow depth for visual hierarchy
+* - Improved focus states for keyboard navigation
+* - Warmer blue tones to match palette
 */
 
 /* ------------------------------------------- */
@@ -24,7 +33,7 @@ html[data-theme="basic-dark-coffee-flow"] {
 
     --text-base-size: 16px;
   
-    /* Background Colors - Deep warm charcoal */
+    /* Background Colors - Deep warm charcoal (fixed progression) */
     --color-bg-50: #E6E2DB;
     --color-bg-100: #B8B2A8;
     --color-bg-150: #9A928A;
@@ -34,8 +43,8 @@ html[data-theme="basic-dark-coffee-flow"] {
     --color-bg-500: #3D3834;
     --color-bg-600: #2E2A26;
     --color-bg-700: #26221F;
-    --color-bg-800: #2F2B26;
-    --color-bg-900: #25221F;
+    --color-bg-800: #221F1C; /* Fixed: was lighter than 900 */
+    --color-bg-900: #1D1A18;
     --color-bg-950: #1A1816;
     --color-bg-500-50: rgba(61, 56, 52, 0.5);
     --color-bg-950-50: rgba(26, 24, 22, 0.65);
@@ -61,25 +70,25 @@ html[data-theme="basic-dark-coffee-flow"] {
     --color-secondary-500: #6B5D52;
     --color-secondary-600: #52473F;
 
-    /* Text Colors - Warm stone */
+    /* Text Colors - Warm stone (improved contrast) */
     --color-text-50: #F5F2EB;
     --color-text-100: #E6E2DB;
     --color-text-200: #D1CCC3;
     --color-text-300: #B8B2A8;
     --color-text-400: #9A928A;
-    --color-text-500: #7C756E;
+    --color-text-500: #8A8279; /* Improved: lighter for better contrast */
     --color-text-600: #5E5852;
     --color-text-700: #C49A7C;
     --color-text-800: #D4B8A8;
     --color-text-900: #25221F;
     --color-text-950: #3D3834;
 
-    /* Semantic Colors - Earth tones */
-    --text-ok: #7A6B5D;
-    --text-status-online: #7A6B5D;
-    --text-warning: #C49A6B;
-    --text-error: #C27878;
-    --bg-alert: #9C4848;
+    /* Semantic Colors - Earth tones (enhanced visibility) */
+    --text-ok: #8A7A68;
+    --text-status-online: #8A7A68;
+    --text-warning: #D4A870; /* Improved: more saturated */
+    --text-error: #D48888; /* Improved: more saturated */
+    --bg-alert: #A85555; /* Improved: more saturated */
     --fg-alert: #F5F2EB;
 
     /* Links - Terracotta warmth */
@@ -100,16 +109,16 @@ html[data-theme="basic-dark-coffee-flow"] {
     --ed-datetime-bg: rgba(196, 154, 124, 0.12);
 
     /* Tasks - Coffee completion */
-    --ed-check-div-border: #7C756E;
+    --ed-check-div-border: #8A8279; /* Improved: better visibility */
     --ed-check-div-hover-border: #C49A7C;
     --ed-check-done-bg: #6B5D52;
     --ed-check-done-fg: #25221F;
 
-    /* Done task styling */
+    /* Done task styling (consistent opacity) */
     .listitem.listitem-task.state-done .lineitem-text {
-        color: #7C756E !important;
+        color: #8A8279 !important; /* Improved: matches text-500 */
         text-decoration-color: #6B5D52 !important;
-        opacity: 0.7 !important;
+        opacity: 0.75 !important; /* Consistent with light mode */
     }
 
     /* Selection - Warm amber glow */
@@ -138,10 +147,10 @@ html[data-theme="basic-dark-coffee-flow"] {
 
     /* Note blocks */
     --ed-block-note-bg: rgba(196, 154, 124, 0.08);
-    --ed-block-note-border: #7C756E;
+    --ed-block-note-border: #8A8279; /* Improved: better visibility */
 
     /* UI Components - Coffee structure */
-    --cards-bg: #2F2B26;
+    --cards-bg: #26221F; /* Improved: matches bg-700 properly */
     --cards-hover-bg: #3D3834;
     --cards-border-color: transparent;
     --cards-border-color-focused: transparent;
@@ -154,15 +163,15 @@ html[data-theme="basic-dark-coffee-flow"] {
     --cmdpal-bg-color: #26221F;
     --cmdpal-selected-bg-color: #4A3F36;
     --cmdpal-selected-fg-color: #F5F2EB;
-    --cmdpal-hover-bg-color: #2F2B26;
+    --cmdpal-hover-bg-color: #2E2A26;
     --cmdpal-border-color: rgba(245, 242, 235, 0.05);
 
-    --input-bg-color: #25221F;
+    --input-bg-color: #221F1C;
     --input-border-color: #4A4540;
-    --input-border-focus: 1px solid #7C756E;
+    --input-border-focus: 1px solid #8A8279; /* Improved: better visibility */
     --input-border-shadow: 0 0 8px rgba(196, 154, 124, 0.2);
 
-    --button-primary-bg-color: #7C756E;
+    --button-primary-bg-color: #8A8279; /* Improved: better contrast */
     --button-primary-fg-color: #F5F2EB;
     --button-primary-bg-hover-color: #C49A7C;
     --button-bg-color: #3D3834;
@@ -178,19 +187,19 @@ html[data-theme="basic-dark-coffee-flow"] {
         0 0 15px rgba(196, 154, 124, 0.3),
         0 0 30px rgba(196, 154, 124, 0.15);
 
-    /* Enums - Muted earth palette */
-    --enum-red-bg: rgba(156, 72, 72, 0.25);
-    --enum-red-fg: #D4A8A8;
+    /* Enums - Muted earth palette (warmer blues) */
+    --enum-red-bg: rgba(168, 85, 85, 0.25); /* Improved: more saturated */
+    --enum-red-fg: #D48888;
     --enum-orange-bg: rgba(196, 154, 124, 0.2);
     --enum-orange-fg: #D4B8A8;
     --enum-yellow-bg: rgba(180, 160, 100, 0.2);
     --enum-yellow-fg: #E0D0A0;
     --enum-green-bg: rgba(122, 107, 93, 0.25);
     --enum-green-fg: #B8A898;
-    --enum-cyan-bg: rgba(100, 160, 160, 0.2);
-    --enum-cyan-fg: #A8D0D0;
-    --enum-blue-bg: rgba(120, 140, 180, 0.2);
-    --enum-blue-fg: #B8C8E8;
+    --enum-cyan-bg: rgba(110, 140, 130, 0.2); /* Improved: warmer cyan */
+    --enum-cyan-fg: #B0C8C0;
+    --enum-blue-bg: rgba(130, 135, 155, 0.2); /* Improved: warmer blue */
+    --enum-blue-fg: #C0C4D8;
     --enum-purple-bg: rgba(160, 120, 160, 0.2);
     --enum-purple-fg: #D0B8D0;
     --enum-pink-bg: rgba(180, 120, 140, 0.2);
@@ -200,9 +209,17 @@ html[data-theme="basic-dark-coffee-flow"] {
     --prop-bg-focused: rgba(196, 154, 124, 0.2);
     --shadow-sticky-row: 0 6px 12px rgba(0, 0, 0, 0.2);
     --ed-drag-handle-color: #5E5852;
-    --ed-drag-handle-hover-border: #7C756E;
+    --ed-drag-handle-hover-border: #8A8279; /* Improved: better visibility */
 
     --gradient-scrim: none;
+
+    /* Focus states for keyboard navigation */
+    button:focus-visible,
+    input:focus-visible,
+    [tabindex]:focus-visible {
+        outline: 2px solid #C49A7C;
+        outline-offset: 2px;
+    }
 }
 
 /* ------------------------------------------- */
@@ -259,24 +276,24 @@ html[data-theme="basic-light-coffee-flow"] {
     --color-secondary-500: #6B5D52;
     --color-secondary-600: #52473F;
 
-    /* Text Colors - Near black with warmth */
+    /* Text Colors - Near black with warmth (improved contrast) */
     --color-text-50: #0F0E0D;
     --color-text-100: #1C1917;
     --color-text-200: #292524;
     --color-text-300: #3D3834;
     --color-text-400: #524B44;
     --color-text-500: #6B635A;
-    --color-text-600: #8A817A;
+    --color-text-600: #7A7169; /* Improved: darker for better contrast */
     --color-text-700: #825E42;
     --color-text-800: #664833;
     --color-text-900: #F7F4EE;
     --color-text-950: #292524;
 
-    /* Semantic Colors - Earth tones */
-    --text-ok: #5A4D42;
-    --text-status-online: #5A4D42;
-    --text-warning: #8B6914;
-    --text-error: #8B4040;
+    /* Semantic Colors - Earth tones (enhanced visibility) */
+    --text-ok: #4A3F36;
+    --text-status-online: #4A3F36;
+    --text-warning: #7A5810; /* Improved: more saturated */
+    --text-error: #7A3636; /* Improved: more saturated */
     --bg-alert: #C27878;
     --fg-alert: #FDF9F5;
 
@@ -303,7 +320,7 @@ html[data-theme="basic-light-coffee-flow"] {
     --ed-check-done-bg: #6B5D52;
     --ed-check-done-fg: #FDF9F5;
 
-    /* Done task styling */
+    /* Done task styling (consistent opacity) */
     .listitem.listitem-task.state-done .lineitem-text {
         color: #8A817A !important;
         text-decoration-color: #6B5D52 !important;
@@ -319,7 +336,7 @@ html[data-theme="basic-light-coffee-flow"] {
     --ed-caret-self-radius: 2px;
     --ed-caret-self-border-width: 0px;
     --ed-caret-self-background: color-mix(in srgb, #9C7658 90%, transparent);
-    --ed-caret-self-box-shadow: 0 0 3px rgba(156, 118, 88, 0.4);
+    --ed-caret-self-box-shadow: 0 0 5px rgba(156, 118, 88, 0.5); /* Improved: stronger glow */
 
     /* Quotes & Code */
     --ed-quote-border-color: #C4BEB4;
@@ -368,27 +385,27 @@ html[data-theme="basic-light-coffee-flow"] {
     --button-bg-hover-color: #D1CCC3;
 
     --color-shadow: rgba(15, 14, 13, 0.08);
-    --color-shadow-cards: 0 4px 6px rgba(15, 14, 13, 0.04);
-    --color-shadow-hover: 0 6px 12px rgba(15, 14, 13, 0.08);
+    --color-shadow-cards: 0 4px 6px rgba(15, 14, 13, 0.08); /* Improved: more depth */
+    --color-shadow-hover: 0 6px 12px rgba(15, 14, 13, 0.12); /* Improved: more depth */
 
     --logo-color: #825E42;
     --logo-glow-shadow:
         0 0 15px rgba(184, 149, 120, 0.2),
         0 0 30px rgba(184, 149, 120, 0.1);
 
-    /* Enums - Muted earth palette */
-    --enum-red-bg: rgba(139, 64, 64, 0.12);
-    --enum-red-fg: #8B4040;
+    /* Enums - Muted earth palette (warmer blues) */
+    --enum-red-bg: rgba(122, 54, 54, 0.12);
+    --enum-red-fg: #7A3636; /* Improved: more saturated */
     --enum-orange-bg: rgba(184, 149, 120, 0.12);
     --enum-orange-fg: #825E42;
-    --enum-yellow-bg: rgba(139, 105, 20, 0.12);
-    --enum-yellow-fg: #8B6914;
+    --enum-yellow-bg: rgba(122, 88, 16, 0.12);
+    --enum-yellow-fg: #7A5810; /* Improved: more saturated */
     --enum-green-bg: rgba(82, 71, 63, 0.12);
     --enum-green-fg: #52473F;
-    --enum-cyan-bg: rgba(70, 110, 110, 0.12);
-    --enum-cyan-fg: #466E6E;
-    --enum-blue-bg: rgba(90, 100, 120, 0.12);
-    --enum-blue-fg: #5F6478;
+    --enum-cyan-bg: rgba(70, 100, 90, 0.12); /* Improved: warmer cyan */
+    --enum-cyan-fg: #46645A;
+    --enum-blue-bg: rgba(80, 85, 100, 0.12); /* Improved: warmer blue */
+    --enum-blue-fg: #505564;
     --enum-purple-bg: rgba(120, 90, 120, 0.12);
     --enum-purple-fg: #785A78;
     --enum-pink-bg: rgba(140, 90, 110, 0.12);
@@ -396,10 +413,17 @@ html[data-theme="basic-light-coffee-flow"] {
 
     --prop-border-focused: #FAF8F5;
     --prop-bg-focused: rgba(184, 149, 120, 0.15);
-    --shadow-sticky-row: 0 6px 12px rgba(0, 0, 0, 0);
+    --shadow-sticky-row: 0 6px 12px rgba(15, 14, 13, 0.06); /* Improved: subtle depth */
     --ed-drag-handle-color: #C4BEB4;
     --ed-drag-handle-hover-border: #8A817A;
 
-    /*--gradient-scrim: none; */
-}
+    /*--gradient-scrim: none;*/
 
+    /* Focus states for keyboard navigation */
+    button:focus-visible,
+    input:focus-visible,
+    [tabindex]:focus-visible {
+        outline: 2px solid #825E42;
+        outline-offset: 2px;
+    }
+}
