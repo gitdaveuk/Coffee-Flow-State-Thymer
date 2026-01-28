@@ -400,6 +400,6 @@ html[data-theme="basic-light-coffee-flow"] {
     --ed-drag-handle-color: #C4BEB4;
     --ed-drag-handle-hover-border: #8A817A;
 
-    --gradient-scrim: none;
+    /*--gradient-scrim: none; */
 }
 
