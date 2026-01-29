@@ -372,6 +372,8 @@ html[data-theme="basic-light-coffee-flow"] {
     --cmdpal-hover-bg-color: #F0EBE3;
     --cmdpal-border-color: transparent;
 
+    --kbd-bg: #D5D1C9;
+    
     --input-bg-color: #FAF8F5;
     --input-border-color: #C4BEB4;
     --input-border-focus: 1px solid #8A817A;
